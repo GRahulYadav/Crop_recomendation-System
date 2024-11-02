@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation System</h1>
+        <form action="/predict" method="POST">
+            <label for="nitrogen">Nitrogen Content (N):</label>
+            <input type="number" id="nitrogen" name="nitrogen" required>
+
+            <label for="phosphorus">Phosphorus Content (P):</label>
+            <input type="number" id="phosphorus" name="phosphorus" required>
+
+            <label for="potassium">Potassium Content (K):</label>
+            <input type="number" id="potassium" name="potassium" required>
+
+            <label for="temperature">Temperature (°C):</label>
+            <input type="number" id="temperature" name="temperature" required>
+
+            <label for="humidity">Humidity (%):</label>
+            <input type="number" id="humidity" name="humidity" required>
+
+            <label for="ph">Soil pH:</label>
+            <input type="number" step="0.1" id="ph" name="ph" required>
+
+            <label for="rainfall">Rainfall (mm):</label>
+            <input type="number" id="rainfall" name="rainfall" required>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+        <div id="result">
+            <!-- Result will be displayed here after prediction -->
+        </div>
+    </div>
+</body>
+</html>
